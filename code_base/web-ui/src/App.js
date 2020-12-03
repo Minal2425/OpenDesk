@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faFileUpload } from '@fortawesome/free-solid-svg-icons'
 
 import { BrowserRouter } from 'react-router-dom';
+import { Routes } from './router/Routes'
 
-import Layout from './components/Layout/Layout'
-import SetupBuilder from './container/SetupBuilder/SetupBuilder'
+library.add(faFileUpload)
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Layout />
-        <SetupBuilder />
+        <Routes />
       </BrowserRouter>
     );
   }
